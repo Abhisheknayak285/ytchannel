@@ -1,0 +1,485 @@
+/* You can keep a lot of the base styles from the tattoo shop website,
+   but we'll adjust some elements to fit a personal/YouTuber theme. */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Lighter background for a personal feel */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Roboto Slab', serif;
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+p, label, select, input, textarea {
+    color: #555;
+}
+
+a {
+    color: #e62424; /* YouTube red as accent color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #cc1818;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    color: #333;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    margin-right: 0.5rem;
+    color: #e62424;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 1.5rem;
+}
+
+nav a {
+    color: #555;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #e62424;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    background-color: #e62424;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added transitions */
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #cc1818;
+    transform: scale(1.03); /* Subtle scale on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow on hover */
+}
+
+.secondary-button {
+    background-color: transparent;
+    border: 2px solid #e62424;
+    color: #e62424;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added transitions */
+}
+
+.secondary-button:hover {
+    background-color: #e62424;
+    color: #fff;
+    transform: scale(1.03); /* Subtle scale on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow on hover */
+}
+
+.small-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Specific Button Styles */
+.subscribe-button {
+    background-color: #cc0000; /* Classic YouTube Subscribe red */
+    color: #fff;
+    padding: 0.8rem 1.75rem;
+    font-weight: bold;
+    border-radius: 25px; /* Rounded corners for subscribe button */
+    margin-left: -10px; /* Adjust this value to shift left (negative) or right (positive) */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added transitions */
+}
+
+.subscribe-button:hover {
+    background-color: #aa0000;
+    transform: scale(1.05); /* Slightly scale up on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+}
+
+.watch-button {
+    background-color: #007bff; /* A common "watch" button color */
+    color: #fff;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added transitions */
+}
+
+.watch-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.03); /* Subtle scale on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow on hover */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #f0f0f0;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-area {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    justify-content: center; /* Center horizontally */
+    margin-bottom: 1rem;
+}
+
+.profile-pic {
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1.5rem; /* Add some space between the pic and button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.hero .watch-button {
+    margin-bottom: 2rem; /* Add margin if needed */
+}
+
+.social-links {
+    margin-bottom: 2rem;
+}
+
+.social-links a {
+    color: #333;
+    margin: 0 0.75rem;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #e62424;
+}
+
+/* About Section */
+.about-section {
+    padding: 4rem 2rem;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 1.5rem; /* Space between image and text */
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center; /* Center the text as well */
+}
+
+.about-content img {
+    max-width: 100%; /* Make image responsive and fit container */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem; /* Add some space below the image */
+}
+
+.about-content p {
+    line-height: 1.8;
+}
+
+/* Responsive adjustments if needed */
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row; /* Go back to side-by-side on larger screens if desired */
+        text-align: left; /* Align text to the left on larger screens */
+    }
+    .about-content img {
+        max-width: 400px; /* Adjust image width for side-by-side layout */
+        margin-bottom: 0;
+        margin-right: 2rem; /* Add space between image and text */
+    }
+}
+
+/* Videos Section */
+.videos-section {
+    padding: 4rem 2rem;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #eee;
+}
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.video-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added transition for box-shadow */
+}
+
+.video-item iframe {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.video-item:hover {
+    transform: scale(1.03); /* Slightly scale up on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+}
+
+.video-item.animated {
+    transform: scale(1.05); /* Slightly scale up on click */
+}
+
+/* View All Button Container */
+.view-all-button-container {
+    grid-column: 1 / -1; /* Span across all columns */
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Community Section */
+.community-section {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.community-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.community-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #fff;
+    color: #333;
+    padding: 0.75rem 1.25rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added transitions */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.community-button i {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.community-button:hover {
+    background-color: #e62424;
+    color: #fff;
+    transform: scale(1.03); /* Subtle scale on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow on hover */
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 4rem 2rem;
+    background-color: #fff;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact-details i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: #e62424;
+}
+
+.contact-form, .appointment-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact-form input, .contact-form textarea, .appointment-form input, .appointment-form textarea, .appointment-form select {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form textarea, .appointment-form textarea {
+    resize: vertical;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #eee;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.footer-logo {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.footer-social a {
+    color: #eee;
+    margin-left: 1rem;
+    font-size: 1.4rem;
+}
+
+.footer-social a:hover {
+    color: #e62424;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+
+    nav li {
+        margin: 1rem 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .hero {
+        padding: 3rem 1.5rem;
+    }
+
+    .profile-area {
+        flex-direction: column; /* Stack on smaller screens */
+        align-items: center;
+        justify-content: center; /* Center on smaller screens */
+    }
+
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content img {
+        width: 200px;
+        margin-bottom: 1.5rem;
+    }
+
+    .videos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .view-all-button-container {
+        margin-top: 1rem; /* Adjust margin in smaller screens */
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
