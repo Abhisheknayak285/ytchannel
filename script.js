@@ -7,13 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const videoItems = document.querySelectorAll('.video-item');
 
   // Animate profile picture and subscribe button on load
-  if (profilePic) {
-    profilePic.classList.add('animate');
-  }
+  setTimeout(() => {
+    if (profilePic) {
+      profilePic.classList.add('animate');
+      console.log('Profile pic animate class added'); // Log to console
+    }
 
-  if (subscribeButton) {
-    subscribeButton.classList.add('animate');
-  }
+    if (subscribeButton) {
+      subscribeButton.classList.add('animate');
+      console.log('Subscribe button animate class added'); // Log to console
+    }
+  }, 1000); // Wait for 1 second after page load
 
   // Hamburger menu functionality
   if (hamburger && navMenu) {
