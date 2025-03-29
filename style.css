@@ -1,5 +1,5 @@
 /* You can keep a lot of the base styles from the tattoo shop website,
-   but we'll adjust some elements to fit a personal/YouTuber theme. */
+    but we'll adjust some elements to fit a personal/YouTuber theme. */
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -33,21 +33,23 @@ a:hover {
 
 /* Header */
 header {
-    background-color: #fff;
-    color: #333;
+    background-color: #222; /* Dark background */
+    color: #eee; /* Light text for contrast */
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #eee;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #333; /* Darker border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow */
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: 'Anton', sans-serif; /* Using Anton font */
+    font-weight: normal;
     display: flex;
     align-items: center;
+    color: #eee;
 }
 
 .logo i {
@@ -67,12 +69,13 @@ nav li {
 }
 
 nav a {
-    color: #555;
+    color: #ccc; /* Slightly lighter text for navigation links */
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #e62424;
+    color: #e62424; /* YouTube red on hover */
 }
 
 /* Buttons */
@@ -403,7 +406,7 @@ footer {
     nav ul {
         display: none;
         flex-direction: column;
-        background-color: #fff;
+        background-color: #222;
         position: absolute;
         top: 60px;
         left: 0;
