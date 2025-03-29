@@ -125,7 +125,14 @@ nav a:hover {
     font-weight: bold;
     border-radius: 25px; /* Rounded corners for subscribe button */
     margin-left: -10px; /* Adjust this value to shift left (negative) or right (positive) */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added transitions */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Added transitions */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Initially moved down */
+}
+
+.subscribe-button.animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .subscribe-button:hover {
@@ -172,6 +179,14 @@ nav a:hover {
     object-fit: cover;
     margin-right: 1.5rem; /* Add some space between the pic and button */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-20px); /* Initially moved left */
+    transition: opacity 0.5s ease-in-out, transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.profile-pic.animate {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .hero h1 {
@@ -248,6 +263,44 @@ nav a:hover {
         margin-bottom: 0;
         margin-right: 2rem; /* Add space between image and text */
     }
+}
+
+/* Services Section */
+.services-section {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-item h3 {
+    margin-bottom: 1rem;
+    color: #e62424;
+}
+
+.service-item p {
+    line-height: 1.7;
+    color: #555;
 }
 
 /* Videos Section */
@@ -336,6 +389,7 @@ nav a:hover {
 .contact-section {
     padding: 4rem 2rem;
     background-color: #fff;
+    text-align: center; /* Center aligns the h2 and p by default */
 }
 
 .contact-info {
@@ -404,131 +458,4 @@ footer {
 .footer-social a {
     color: #eee;
     margin-left: 1rem;
-    font-size: 1.2rem; /* Adjust social icon size if needed */
-}
-
-.footer-social a:hover {
-    color: #e62424;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: #222;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        z-index: 10;
-    }
-
-    nav li {
-        margin-left: 1rem; /* Reduced margin on smaller screens */
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: block;
-        cursor: pointer;
-    }
-
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .hero {
-        padding: 3rem 1.5rem;
-    }
-
-    .profile-area {
-        flex-direction: column; /* Stack on smaller screens */
-        align-items: center;
-        justify-content: center; /* Center on smaller screens */
-    }
-
-    .profile-pic {
-        width: 80px;
-        height: 80px;
-        margin-right: 0;
-        margin-bottom: 1rem;
-    }
-
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-content img {
-        width: 200px;
-        margin-bottom: 1.5rem;
-    }
-
-    .videos-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .view-all-button-container {
-        margin-top: 1rem; /* Adjust margin in smaller screens */
-    }
-
-    .contact-info {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-    footer {
-        height: auto;
-        padding: 1rem 2rem;
-    }
-}
-
-/* Add this CSS for the notification animation */
-@keyframes fadeInOut {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    10% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    90% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-}
-
-/* Apply the animation to the notification div */
-.notification {
-    animation: fadeInOut 3.5s ease-in-out; /* 3 seconds display + 0.5 seconds animation */
-}
-
-.videos-section h2,
-.contact-section h2,
-.contact-section .section-description,
-.contact-section .contact-info {
-    text-align: center;
-}
+    font-size
