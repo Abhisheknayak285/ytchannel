@@ -233,7 +233,7 @@ nav a:hover {
 }
 
 /* Center "About Me" */
-.about-me-heading { /* Add this class to your h2 or h3 tag */
+.about-section h2{ /* Add this class to your h2 or h3 tag */
     text-align: center;
 }
 
@@ -348,6 +348,7 @@ nav a:hover {
 .contact-details {
     display: flex;
     align-items: center;
+    justify-content: center; /* Center the content horizontally */
     margin-bottom: 1rem;
 }
 
@@ -523,4 +524,11 @@ footer {
 /* Apply the animation to the notification div */
 .notification {
     animation: fadeInOut 3.5s ease-in-out; /* 3 seconds display + 0.5 seconds animation */
+}
+
+.videos-section h2,
+.contact-section h2,
+.contact-section .section-description,
+.contact-section .contact-info {
+    text-align: center;
 }
