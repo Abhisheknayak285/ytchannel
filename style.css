@@ -41,6 +41,7 @@ header {
     align-items: center;
     border-bottom: 1px solid #333; /* Darker border */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow */
+    height: 60px; /*added header height*/
 }
 
 .logo {
@@ -65,7 +66,7 @@ nav ul {
 }
 
 nav li {
-    margin-left: 1.5rem;
+    margin-left: 2rem; /* Increased margin-left */
 }
 
 nav a {
@@ -231,6 +232,11 @@ nav a:hover {
     line-height: 1.8;
 }
 
+/* Center "About Me" */
+.about-me-heading { /* Add this class to your h2 or h3 tag */
+    text-align: center;
+}
+
 /* Responsive adjustments if needed */
 @media (min-width: 768px) {
     .about-content {
@@ -375,26 +381,29 @@ footer {
     background-color: #333;
     color: #eee;
     text-align: center;
-    padding: 1.5rem 2rem;
+    padding: 0.75rem 2rem; /* Reduced padding (adjust as needed) */
     font-size: 0.9rem;
+    height: 60px; /* Set a specific height to match the header */
+    display: flex; /*Use flexbox to align content vertically and horizontally*/
+    align-items: center; /*Vertically center the content*/
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
+    width: 100%; /*Ensure the footer spans the full width*/
 }
 
 .footer-logo {
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1rem; /* Adjust font size if needed */
 }
 
 .footer-social a {
     color: #eee;
     margin-left: 1rem;
-    font-size: 1.4rem;
+    font-size: 1.2rem; /* Adjust social icon size if needed */
 }
 
 .footer-social a:hover {
@@ -417,7 +426,7 @@ footer {
     }
 
     nav li {
-        margin: 1rem 0;
+        margin-left: 1rem; /* Reduced margin on smaller screens */
     }
 
     nav ul.active {
@@ -485,4 +494,33 @@ footer {
         align-items: center;
         gap: 1rem;
     }
+    footer {
+        height: auto;
+        padding: 1rem 2rem;
+    }
+}
+
+/* Add this CSS for the notification animation */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+/* Apply the animation to the notification div */
+.notification {
+    animation: fadeInOut 3.5s ease-in-out; /* 3 seconds display + 0.5 seconds animation */
 }
